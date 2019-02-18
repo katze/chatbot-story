@@ -1,0 +1,79 @@
+{
+   "2":{
+      "message":"Allo,\nvous me recevez ?",
+      "reponses":[
+         {
+            "message":"oui",
+            "id":"3"
+         },
+         {
+            "message":"non",
+            "id":"4"
+         }
+      ]
+   },
+   "3":{
+      "message":"Quelle bonne nouvelle !\nJe m’ennuyai serieusement ici",
+      "reponses":[
+         {
+            "message":"On joue à un jeu ?",
+            "id":"5"
+         },
+         {
+            "message":"Je dois vous laisser",
+            "id":"4"
+         }
+      ]
+   },
+   "4":{
+      "message":"GAME OVER\ngame_over.jpg\nVotre interlocuteur est mort d’ennui\n(Restart)",
+      "reponses":[
+
+      ]
+   },
+   "5":{
+      "message":"Avec plaisir !\nSaurez-vous deviner à quel animal je pense",
+      "reponses":[
+         {
+            "message":"",
+            "id":"8"
+         }
+      ]
+   },
+   "6":{
+      "message":"Bravo !\n(Restart)",
+      "reponses":[
+
+      ]
+   },
+   "7":{
+      "message":"Non",
+      "reponses":[
+         {
+            "message":"",
+            "id":"8"
+         }
+      ]
+   },
+   "8":{
+      "message":"Une idée ?",
+      "reponses":[
+         {
+            "message":"un chat",
+            "id":"6"
+         },
+         {
+            "message":"un chien",
+            "id":"7"
+         },
+         {
+            "message":"un lapin",
+            "id":"7"
+         },
+         {
+            "message":"une otarie",
+            "id":"7"
+         }
+      ]
+   }
+}

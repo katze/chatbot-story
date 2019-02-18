@@ -1,0 +1,2 @@
+window.isAsyncAvailable = true;
+async () => {};

@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+		<link rel="icon" href="favicon.ico" />
+		<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="handlebars-v4.0.12.js"></script>
+		<script id="human-template" type="text/x-handlebars-template">
+			<div class="message human">
+				<p>{{message}}</p>
+			</div>	
+		</script>
+		<script id="bot-template" type="text/x-handlebars-template">
+			<div class="message bot">
+				<div>
+					<img src="avatar.png" class="avatar">
+					<p>{{message}}</p>
+				</div>
+			</div>
+		</script>
+		<script id="bot-image-template" type="text/x-handlebars-template">
+			<div class="message bot">
+				<div>
+					<img src="avatar.png" class="avatar">
+					<img src="{{message}}" class="media">
+				</div>
+			</div>
+		</script>
+		<script id="answers-template" type="text/x-handlebars-template">
+			<div class="quickAnswers">
+			  {{#each reponses}}
+				<a href="javascript:quickAnswer('{{message}}',{{id}})" class="quickAnswer">{{message}}</a><br/>
+			  {{/each}}
+			</div>
+		</script>
+		<link href="style.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<div id="conversation">
+			<div id="messages"></div>
+		</div>
+
+		<script>
+			// Détection du support ES7 & attribut async
+			new Promise(function (resolve, reject) {
+			  var script = document.createElement('script');
+			  document.body.appendChild(script);
+			  script.onload = resolve.bind(null, true);
+			  script.onerror = reject;
+			  script.async = true;
+			  script.src = 'async-detection.js';
+			})
+			.then(function () {
+			  if(window.isAsyncAvailable){ // les navigateurs recents supportant async
+				$.getScript( "app.js", function( data, textStatus, jqxhr ) {
+				  quickAnswer(null, 2); // lance la conversation avec le message n°2
+				});
+			  }else{ // les vieux navigateurs ne supportant pas async
+				$.getScript( "app_old_browsers.js", function( data, textStatus, jqxhr ) {
+				  quickAnswer(null, 2); // lance la conversation avec le message n°2
+				});
+			  }
+			})
+			.catch(/* generic script loading error */);
+		</script>	
+	</body>
+</html>

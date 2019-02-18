@@ -1,0 +1,106 @@
+*{
+	font-family: "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+body{
+	background-color: #dbdbdb;
+}
+#conversation{
+	min-height:100%;
+	max-width: 500px;
+	margin: auto;
+	background-color: #fff; 
+	border-radius: 12px;		
+	clear: both;
+	box-shadow: 2px 2px #666;
+}
+
+#messages{
+	padding-right:5px;
+	clear: both;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#messages:after {
+  content: ""; /* Important, sinon l'élément n'est pas généré. */
+  display: table;
+  clear: both;
+}
+
+.message{
+	width: 100%;
+	margin:5px;
+	clear: both;
+}
+
+.message.bot{
+
+}
+.message.human{
+	
+}		
+
+.avatar{
+	height: 28px;
+	width: 28px;
+	float: left;
+	margin-top: 6px;
+}
+
+
+.message p{
+	margin: 5px;
+	padding: 5px;
+	border-radius: 12px;
+	max-width: 80%;
+
+}
+
+
+.message.system p{
+	display: block;
+	max-width: 100%;
+	text-align:center;
+	font-style: italic;
+}
+
+
+.message.bot p{
+	background-color: #f1f0f0;
+	margin-left: 5px;
+	display: block;
+	float: left;
+}
+
+.message.bot .media{
+	max-width: 80%;
+	margin: 5px;
+	padding: 5px;
+	border-radius: 12px;				
+}
+
+.message.human p{
+	float:right;
+	background-color: #0077e5;
+	color: #fff;
+}		
+
+#compose{
+	position:absolute;bottom:0;
+}	
+
+.quickAnswers{
+	text-align: center;
+	margin-top: 20px;
+	clear:both;
+}
+
+.quickAnswer{
+	border-radius: 12px;
+	background-color: #ccc;
+	margin: 0px 5px;
+	padding: 7px;
+	line-height: 40px;			
+	clear: both;
+}
