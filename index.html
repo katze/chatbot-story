@@ -38,7 +38,15 @@
 	<body>
 		<div id="conversation">
 			<div id="messages"></div>
+			<div id="entry">
+				<form action="javascript:validateAnwer($('#response').val(), $('#message_id').val());">
+					<input type="hidden" id="message_id" value="" >
+					<input type="text" id="response" autocomplete="off">
+					<input type="submit" id="send">
+				</form>
+			</div>
 		</div>
+
 
 		<script>
 			// Détection du support ES7 & attribut async

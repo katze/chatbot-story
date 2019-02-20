@@ -1,79 +1,138 @@
 {
-   "2":{
-      "message":"Allo,\nvous me recevez ?",
-      "reponses":[
-         {
-            "message":"oui",
-            "id":"3"
-         },
-         {
-            "message":"non",
-            "id":"4"
-         }
-      ]
-   },
-   "3":{
-      "message":"Quelle bonne nouvelle !\nJe m’ennuyai serieusement ici",
-      "reponses":[
-         {
-            "message":"On joue à un jeu ?",
-            "id":"5"
-         },
-         {
-            "message":"Je dois vous laisser",
-            "id":"4"
-         }
-      ]
-   },
-   "4":{
-      "message":"GAME OVER\ngame_over.jpg\nVotre interlocuteur est mort d’ennui\n(Restart)",
-      "reponses":[
-
-      ]
-   },
-   "5":{
-      "message":"Avec plaisir !\nSaurez-vous deviner à quel animal je pense",
-      "reponses":[
-         {
-            "message":"",
-            "id":"8"
-         }
-      ]
-   },
-   "6":{
-      "message":"Bravo !\n(Restart)",
-      "reponses":[
-
-      ]
-   },
-   "7":{
-      "message":"Non",
-      "reponses":[
-         {
-            "message":"",
-            "id":"8"
-         }
-      ]
-   },
-   "8":{
-      "message":"Une idée ?",
-      "reponses":[
-         {
-            "message":"un chat",
-            "id":"6"
-         },
-         {
-            "message":"un chien",
-            "id":"7"
-         },
-         {
-            "message":"un lapin",
-            "id":"7"
-         },
-         {
-            "message":"une otarie",
-            "id":"7"
-         }
-      ]
-   }
+  "2": {
+    "message": "Allo,\nvous me recevez ?",
+    "freeEntry": false,
+    "reponses": [
+      {
+        "message": "oui",
+        "id": "3"
+      },
+      {
+        "message": "non",
+        "id": "4"
+      },
+      {
+        "message": "Qui est-ce ?",
+        "id": "12"
+      }
+    ]
+  },
+  "3": {
+    "message": "Quelle bonne nouvelle !\nJe m’ennuyai serieusement ici",
+    "freeEntry": false,
+    "reponses": [
+      {
+        "message": "On joue à un jeu ?",
+        "id": "5"
+      },
+      {
+        "message": "Je dois vous laisser",
+        "id": "4"
+      }
+    ]
+  },
+  "4": {
+    "message": "GAME OVER\ngame_over.jpg\nVotre interlocuteur est mort d’ennui\n(Restart)",
+    "freeEntry": false,
+    "reponses": []
+  },
+  "5": {
+    "message": "Avec plaisir !\nSaurez-vous deviner à quel animal je pense",
+    "freeEntry": false,
+    "reponses": [
+      {
+        "message": "",
+        "id": "7"
+      }
+    ]
+  },
+  "6": {
+    "message": "Non",
+    "freeEntry": false,
+    "reponses": [
+      {
+        "message": "",
+        "id": "7"
+      }
+    ]
+  },
+  "7": {
+    "message": "Une idée ?",
+    "freeEntry": false,
+    "reponses": [
+      {
+        "message": "un chat",
+        "id": "9"
+      },
+      {
+        "message": "un chien",
+        "id": "6"
+      },
+      {
+        "message": "un lapin",
+        "id": "6"
+      },
+      {
+        "message": "une otarie",
+        "id": "6"
+      }
+    ]
+  },
+  "8": {
+    "message": "Bravo\nqu’est-ce qu’on s’amuse :p\n(Restart)",
+    "freeEntry": false,
+    "reponses": []
+  },
+  "9": {
+    "message": "De quelle couleur ?",
+    "freeEntry": true,
+    "reponses": [
+      {
+        "regExp": "/gris/iu",
+        "id": "8"
+      },
+      {
+        "message": "Je donne ma langue au chat",
+        "id": "10"
+      },
+      {
+        "regExp": "/^(?:(?!\\bgris\\b).)*$/iu",
+        "id": "11"
+      }
+    ]
+  },
+  "10": {
+    "message": "GAME OVER\nil était gris\n(Restart)",
+    "freeEntry": false,
+    "reponses": []
+  },
+  "11": {
+    "message": "Non, une autre idée ?",
+    "freeEntry": true,
+    "reponses": [
+      {
+        "message": "Je donne ma langue aux chats",
+        "id": "10"
+      },
+      {
+        "regExp": "/gris/iu",
+        "id": "8"
+      }
+    ]
+  },
+  "12": {
+    "message": "Bonne question, devide mon nom",
+    "freeEntry": true,
+    "reponses": [
+      {
+        "regExp": "/neko/iu",
+        "id": "13"
+      }
+    ]
+  },
+  "13": {
+    "message": "Bravo",
+    "freeEntry": false,
+    "reponses": []
+  }
 }
